@@ -1,9 +1,5 @@
 
 <?php   session_start();
-    
-    
-
-   
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $usuario = $_POST ['username'];
@@ -19,17 +15,32 @@
         echo 'rellene el formulario';
 
     }  else{
-        //echo $usuario .' - '. $password;
-        if ( $usuario ==  $user_register && $password ==  $pass_register){
-            echo 'listo, iniciastes sesion';
-            header ('location: user.php');
+        try {
+            $conexion = new PDO("mysql: host=localhost; dbname=focaapp",'root','');
+            echo "conexion OK <br>";
+        } catch (PDOException $e) {
+            echo "Error:" . $e->getMessage();
+        } 
+        $statement = $conexion->prepare(" SELECT *  FROM userapp WHERE Username = :username AND Password = :pass ");
+    
+        $statement->execute ( array( ":username"=>$usuario, ":pass"=>$password ));
+    
+        $result = $statement->fetchAll();
+        print_r($statement);   
+
+        if($result){
+            $_SESSION['userRegister']= $usuario;
+            $_SESSION['passRegister']= $password;
+            header('location:user.php');
+
+            echo'intenta mas tarde';
         } else {
-            echo 'Tu usuario no existe';
+            
         }
+        
+        //count(array)
+
     }
-    
-    
-  
 ?>
 
 
