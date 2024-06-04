@@ -1,0 +1,121 @@
+#orden{
+    color: aqua;
+    font-family: 'lemon';
+}
+
+@font-face {
+    font-family:lemon ;
+    src: url(./09-session/font/LEMONMILK-Bold.otf);
+}
+
+.todo{
+height: 20rem;
+width: 20rem;
+align-items: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+padding-top: 10rem;
+
+}
+
+.fondo{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.fondo_2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 600px;
+}
+
+.user_C{
+    border-style: none;
+    background-color: rgba(128, 128, 128, 0.188);
+    padding: 8px;
+    width: 300px;
+}
+
+.solo{
+    flex-direction: column;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.boton{
+    width: 100px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #13ad99;
+    color: white;
+    border-style: none;
+    border-radius: 30px;
+}
+
+.boton2{
+    width: 150px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #13ad99;
+    color: white;
+    border-style: none;
+    border-radius: 30px;
+}
+
+.iniciar{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #13ad99;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-weight: bold
+}
+
+.contenido{
+    display: flex;
+    justify-content: center;    
+    background-color: #13ad989c;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem;
+    border-radius: 10px;
+}
+
+.titulo_1{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.boton_2{
+    color: #13ad98;
+    background-color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.color_b{
+    background-color: #13ad9834;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

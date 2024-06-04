@@ -1,6 +1,8 @@
 
 <?php   session_start();
 
+$alerta = 'rellene el formulario';
+
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $usuario = $_POST ['username'];
         $password = $_POST ['password'];
@@ -12,7 +14,7 @@
 
 
     if (empty($usuario) or empty($password)){
-        echo 'rellene el formulario';
+        echo '<div class="alert alert-danger" role="alert">' . $alerta . '</div>';
 
     }  else{
         try {
@@ -26,7 +28,7 @@
         $statement->execute ( array( ":username"=>$usuario, ":pass"=>$password ));
     
         $result = $statement->fetchAll();
-        print_r($statement);   
+        /* print_r($statement);   */ 
 
         if($result){
             $_SESSION['userRegister']= $usuario;
@@ -35,7 +37,7 @@
 
             echo'intenta mas tarde';
         } else {
-            
+            echo'Usuario o contraseña podrian estar incorrectos';
         }
         
         //count(array)
@@ -51,28 +53,36 @@
     <meta name="viewport" content="width=x, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
 </head>
 <body>
 
-    <h1>Pagina de inicio, Sesion inicializada</h1>
+    <div class="fondo">
+    <div class="todo">
+    <h1 style="text-align:center; font-size: 40px; width: 400px;color: #13ad99; justify-content:center; display:flex; ">Pagina de inicio <br>
+    Sesion inicializada</h1>
     
    
     
 
-    <form action="index.php" method="post">
+    <form class="solo"  action="index.php" method="post">
 
-    <label for="username">User</label>
-    <input id="username" type="text" placeholder="User" name="username">
-    <label for="password">Password</label>
-    <input id="password" type="password" placeholder="Password" name="password">
-    <button type="submit">Iniciar sesion</button>
+ <!--    <label for="username">User</label> -->
+    <input class="user_C" id="username" type="text" placeholder="User" name="username">
+<!--     <label for="password">Password</label> -->
+    <input class="user_C" id="password" type="password" placeholder="Password" name="password">
+    <button class="boton2" type="submit">Iniciar sesion</button>
 
     </form>
 
 
-    <a href="./registro.php">Registro php </a>
+    <a class="iniciar" href="./registro.php">Registro</a>
+    </div>
+    </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
 </body>
 </html>
