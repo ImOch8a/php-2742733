@@ -122,3 +122,52 @@ padding-top: 10rem;
 
 /* landing.php-style */
 
+.titulo_page{
+    display: flex;
+    justify-content: center;
+    padding: 23px;
+}
+
+.contenido_page{
+    display: flex;
+    justify-content: space-around;
+}
+
+.landing_page{
+    background-color: #13ad9860;
+    height: 50rem;
+}
+
+.card-body{
+    background-color: #13ad9836;
+}
+
+:hover.btn{
+    box-shadow: 1px 1px 5px black;
+    transition: 0.2s linear;
+}
+
+.boton_space{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+/* course.php */
+
+.contenedor_course{
+    width: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course_img{
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
