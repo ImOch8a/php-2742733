@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
-<header>
+    <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -19,7 +21,7 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link " href="#">Home</a>
+                            <a class="nav-link " href="./tablas.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">projects</a>
@@ -42,28 +44,30 @@
         </nav>
     </header>
 
-<div class="contenedor_course">
+    <div class="contenedor_course">
 
-<div>
-<img src="./img/software-developer-6521720_1280.jpg" class="course_img" alt="">
-</div>
+        <div>
+            <img src="./img/software-developer-6521720_1280.jpg" class="course_img" alt="">
+        </div>
 
-<div>
-<p>Para aprender a jakiar primero debes empezar por el princio, por eso te invitamos a que comprendas los princiipios de la informatica </p>
-</div>
-
-
-</div>
+        <div>
+            <p>Para aprender a jakiar primero debes empezar por el princio, por eso <br>
+             te invitamos a que comprendas los principios de la informatica </p>
+        </div>
 
 
+    </div>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
     </script>
 </body>
+
 </html>
