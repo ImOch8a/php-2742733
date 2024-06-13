@@ -15,4 +15,9 @@
             
     }
 
+    $_SESSION['mensaje'] = 'Tarea agregada exitosamente';
+    $_SESSION['color'] = 'success';
+
+    header("location:tablas.php")
+
 ?>
