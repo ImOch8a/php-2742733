@@ -59,32 +59,23 @@
                  </tr>
              </thead>
              <tbody>
-
                  <?php
               $statement= $conexion->prepare("SELECT * FROM cursos");
               $statement->execute();
               $result= $statement->fetchAll();
-
               foreach($result as $item) { ?>
-                 <!-- meter el tr -->
-
                  <tr>
-                     <th scope="row"><?php echo $item['id']   ?></th>
-                     <td><?php echo $item['Nombre del curso']   ?></td>
-                     <td><?php echo $item['Imagen de curso']   ?></td>
-                     <td><?php echo $item['Descripcion']   ?></td>
-                     <td><?php echo $item['Cantidad de estudiantes']   ?></td>
-                     <td>✏️Edit | 🗑️Delete</td>
-
+                     <th scope="row"><?php echo $item['ID']?></th>
+                     <td><?php echo $item['titulo']?></td>
+                     <td><?php echo $item['imagen']?></td>
+                     <td><?php echo $item['descripcion']?></td>
+                     <td><?php echo $item['estudiantes']   ?></td>
+                     <td><a href="editar_curso.php?id=<?php echo $item['ID']?>"><i class="bi bi-clouds"></i></a>
+                         <a class="text-danger" href="borrar_curso.php?id=<?php echo $item['ID']?>"><i
+                                 class="bi bi-columns-gap"></i></a>
+                     </td>
                  </tr>
-
-
-
-
                  <?php }  ?>
-
-
-
              </tbody>
          </table>
      </div>
