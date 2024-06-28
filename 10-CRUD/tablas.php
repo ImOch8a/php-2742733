@@ -18,9 +18,7 @@
 <a href="./index.php">Home</a>
 
 <?php else : ?>
-
-<h1>No has iniciado sesion</h1>
-<a href="./index.php">Iniciar sesion</a>
+<a href="./registro.php">Registrate</a>
 
 
 <?php endif   ?>

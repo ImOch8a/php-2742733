@@ -18,7 +18,7 @@
     foreach ($result as $item) { ?>
 
 
-        <a class="no-link" href="course.php?id=<?php echo $item['ID']?>">
+        <a style="text-decoration: none; color:black;" class="no-link" href="course.php?id=<?php echo $item['ID']?>">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <img src="<?php echo $item['imagen'] ?>" class="card-img-top" alt="...">

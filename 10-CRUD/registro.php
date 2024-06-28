@@ -23,7 +23,7 @@
         } catch (PDOException $e) {
             echo "Error:" . $e->getMessage();
         } 
-        $statement = $conexion->prepare(" INSERT INTO `userapp` (`ID`, `Username`, `Email`, `Password`)
+        $statement = $conexion->prepare(" INSERT INTO `usersapp` (`ID`, `Username`, `Email`, `Password`)
         VALUES (NULL, :username, :email, :pass)" );
     
         $statement->execute(array(":username"=>$usuario,":email"=>$email,":pass"=>$password));
@@ -82,7 +82,7 @@
             </form>
 
             <br>
-            <a class="iniciar" href="index.php">
+            <a class="iniciar" href="./user.php" style="padding: 10px;">
                 Iniciar sesion </a>
         </div>
     </div>

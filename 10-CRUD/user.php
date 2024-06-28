@@ -29,8 +29,8 @@ session_start();
 
             <?php else: ?>
 
-            <h1>No has iniciado sesion</h1>
-            <a href="./index.php">Iniciar Sesion</a>
+            <h1>No te haz registrado</h1>
+            <a href="./registro.php" style="text-decoration: none; color:white; font-weight: bolder;">Registrate</a>
 
             <?php endif ?>
         </div>
